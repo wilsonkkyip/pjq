@@ -47,6 +47,7 @@ def pjq(
                 if len(json_dict) > 0:
                     json_dict = [json_dict[i] for i in idx]
                 else:
+                    # escape if it is empty list
                     return default
             except ValueError:
                 msg: str = IDX_INT_ERROR_MSG(q, query, prev_q)
